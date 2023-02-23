@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout disableAnsi="false"
+                           pattern="%style{%c{1} | %d{yyyy-MM-dd HH:mm:ss}}{blue} %highlight{[%-5level]}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green} %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.netmera.automation" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
